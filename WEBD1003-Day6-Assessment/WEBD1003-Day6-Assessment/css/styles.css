@@ -1,7 +1,103 @@
+:root {
+    --blue: #0c4a6e;
+    --white: #FAFAFA;
+    --black: #000000;
+    --grey: #C3C3C4;
+}
+
 /* ***************** utilities & containers ***************** */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.inner-container {
+    max-width: 1528px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+}
 
 /* ***************** global typography ***************** */
+h1 {
+    font-size: 1.625rem;
+}
+
+h2 {
+    font-size: 3.75rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.125rem;
+}
 
 /* ***************** header & footer ***************** */
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    padding: 1.625rem;
+    margin-bottom: 1.75rem;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1.625rem;
+    margin-top: 6rem;
+}
 
 /* ***************** main content ***************** */
+.team-members{
+    margin-bottom: 6rem;
+}
+
+.team-members .flex-container {
+    flex-wrap: wrap;
+/* flex-wrap here allowed the team member profiles to display onto multiple lines */
+}
+
+.team-members .flex-container section {
+    background-color: var(--grey);
+    padding: 1.75rem;
+    width: calc((100% / 2) - (2rem / 2));
+    gap: 3.5rem;
+    display: flex;
+    align-items: center;
+/* align-items to center the text and image with the box */
+}
+
+.team-members .flex-container section:first-child,
+.team-members .flex-container section:nth-child(2) {
+    margin-bottom: 1.25rem;
+}
+
+.service-plans .flex-container .service-plans {
+    background-color: var(--grey);
+    padding: 1.75rem;
+    width: calc((100% / 3) - (2rem / 3));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-plans .flex-container .service-plans ul {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+/* display was used here to center the ul items with the rest of the text in the box */
+}
+
+.service-plans .flex-container .service-plans p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue);
+}
